@@ -127,7 +127,7 @@ end TCL_Generic;&#13;
       <a name="bit12" val="1"/>
       <a name="bit13" val="1"/>
       <a name="bit14" val="1"/>
-      <a name="bit15" val="1"/>
+      <a name="bit15" val="0"/>
       <a name="bit2" val="3"/>
       <a name="bit4" val="3"/>
       <a name="bit5" val="2"/>
@@ -137,12 +137,6 @@ end TCL_Generic;&#13;
       <a name="bit9" val="2"/>
       <a name="fanout" val="4"/>
       <a name="incoming" val="16"/>
-    </comp>
-    <comp lib="0" loc="(660,470)" name="Splitter">
-      <a name="bit2" val="1"/>
-      <a name="bit3" val="1"/>
-      <a name="bit4" val="1"/>
-      <a name="incoming" val="5"/>
     </comp>
     <comp lib="0" loc="(750,630)" name="Splitter">
       <a name="bit1" val="0"/>
@@ -298,14 +292,14 @@ end TCL_Generic;&#13;
     <wire from="(650,240)" to="(650,270)"/>
     <wire from="(650,270)" to="(1250,270)"/>
     <wire from="(650,270)" to="(650,360)"/>
-    <wire from="(660,470)" to="(660,630)"/>
+    <wire from="(660,460)" to="(660,630)"/>
+    <wire from="(660,460)" to="(690,460)"/>
     <wire from="(660,630)" to="(670,630)"/>
     <wire from="(660,650)" to="(670,650)"/>
     <wire from="(660,660)" to="(750,660)"/>
     <wire from="(660,670)" to="(660,700)"/>
     <wire from="(660,700)" to="(690,700)"/>
     <wire from="(670,630)" to="(670,650)"/>
-    <wire from="(680,460)" to="(690,460)"/>
     <wire from="(680,590)" to="(680,680)"/>
     <wire from="(680,590)" to="(790,590)"/>
     <wire from="(680,680)" to="(690,680)"/>
