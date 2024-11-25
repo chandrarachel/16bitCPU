@@ -194,11 +194,9 @@ end TCL_Generic;&#13;
     <comp lib="0" loc="(1280,160)" name="Probe">
       <a name="appearance" val="NewPins"/>
     </comp>
-    <comp lib="0" loc="(1410,310)" name="Constant"/>
     <comp lib="0" loc="(1590,710)" name="Probe">
       <a name="appearance" val="NewPins"/>
     </comp>
-    <comp lib="0" loc="(1730,620)" name="Constant"/>
     <comp lib="0" loc="(200,760)" name="Clock"/>
     <comp lib="0" loc="(230,620)" name="Constant"/>
     <comp lib="0" loc="(320,350)" name="Constant">
@@ -327,8 +325,6 @@ end TCL_Generic;&#13;
     <wire from="(1360,400)" to="(1390,400)"/>
     <wire from="(1380,250)" to="(1430,250)"/>
     <wire from="(1390,400)" to="(1390,410)"/>
-    <wire from="(1410,310)" to="(1410,320)"/>
-    <wire from="(1410,310)" to="(1430,310)"/>
     <wire from="(1430,220)" to="(1430,250)"/>
     <wire from="(1580,570)" to="(1590,570)"/>
     <wire from="(1590,510)" to="(1590,570)"/>
@@ -339,21 +335,15 @@ end TCL_Generic;&#13;
     <wire from="(1680,470)" to="(1680,490)"/>
     <wire from="(1680,490)" to="(1700,490)"/>
     <wire from="(1710,370)" to="(1710,480)"/>
-    <wire from="(1720,530)" to="(1740,530)"/>
     <wire from="(1730,500)" to="(1760,500)"/>
-    <wire from="(1730,620)" to="(1740,620)"/>
-    <wire from="(1740,530)" to="(1740,620)"/>
     <wire from="(1760,440)" to="(1760,500)"/>
     <wire from="(200,760)" to="(230,760)"/>
-    <wire from="(230,620)" to="(280,620)"/>
+    <wire from="(230,620)" to="(300,620)"/>
     <wire from="(230,760)" to="(230,780)"/>
     <wire from="(230,780)" to="(310,780)"/>
     <wire from="(240,220)" to="(1430,220)"/>
     <wire from="(240,220)" to="(240,610)"/>
     <wire from="(240,610)" to="(300,610)"/>
-    <wire from="(280,620)" to="(280,660)"/>
-    <wire from="(280,620)" to="(300,620)"/>
-    <wire from="(280,660)" to="(380,660)"/>
     <wire from="(310,630)" to="(310,780)"/>
     <wire from="(310,780)" to="(360,780)"/>
     <wire from="(320,350)" to="(390,350)"/>
@@ -696,6 +686,12 @@ end TCL_Generic;&#13;
       <a name="label" val="Reg_Write"/>
       <a name="output" val="true"/>
     </comp>
+    <comp lib="0" loc="(400,680)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Halt_Out"/>
+      <a name="output" val="true"/>
+    </comp>
     <comp loc="(400,120)" name="RegDst"/>
     <comp loc="(400,190)" name="Branch"/>
     <comp loc="(400,260)" name="MemRead"/>
@@ -704,6 +700,7 @@ end TCL_Generic;&#13;
     <comp loc="(400,470)" name="MemWrite"/>
     <comp loc="(400,540)" name="ALUSrc"/>
     <comp loc="(400,610)" name="RegWrite"/>
+    <comp loc="(400,680)" name="Halt"/>
     <wire from="(100,120)" to="(180,120)"/>
     <wire from="(180,120)" to="(180,190)"/>
     <wire from="(180,190)" to="(180,260)"/>
@@ -712,6 +709,7 @@ end TCL_Generic;&#13;
     <wire from="(180,400)" to="(180,470)"/>
     <wire from="(180,470)" to="(180,540)"/>
     <wire from="(180,540)" to="(180,610)"/>
+    <wire from="(180,610)" to="(180,680)"/>
   </circuit>
   <circuit name="RegDst">
     <a name="appearance" val="logisim_evolution"/>
@@ -735,58 +733,32 @@ end TCL_Generic;&#13;
       <a name="fanout" val="4"/>
       <a name="incoming" val="4"/>
     </comp>
-    <comp lib="0" loc="(620,220)" name="Pin">
+    <comp lib="0" loc="(480,120)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="Reg_Dst"/>
       <a name="output" val="true"/>
     </comp>
-    <comp lib="1" loc="(310,110)" name="NOT Gate"/>
-    <comp lib="1" loc="(310,140)" name="NOT Gate"/>
-    <comp lib="1" loc="(360,160)" name="AND Gate"/>
-    <comp lib="1" loc="(360,250)" name="AND Gate"/>
-    <comp lib="1" loc="(360,90)" name="AND Gate">
-      <a name="label" val="A_NOT_C"/>
-    </comp>
-    <comp lib="1" loc="(380,290)" name="NOT Gate"/>
-    <comp lib="1" loc="(430,180)" name="AND Gate"/>
-    <comp lib="1" loc="(430,270)" name="AND Gate"/>
-    <comp lib="1" loc="(510,160)" name="OR Gate"/>
-    <comp lib="1" loc="(610,220)" name="OR Gate"/>
+    <comp lib="1" loc="(320,170)" name="NOT Gate"/>
+    <comp lib="1" loc="(370,150)" name="AND Gate"/>
+    <comp lib="1" loc="(370,90)" name="AND Gate"/>
+    <comp lib="1" loc="(460,120)" name="OR Gate"/>
     <wire from="(140,130)" to="(190,130)"/>
-    <wire from="(210,100)" to="(240,100)"/>
-    <wire from="(210,110)" to="(230,110)"/>
-    <wire from="(210,120)" to="(210,290)"/>
-    <wire from="(210,290)" to="(350,290)"/>
-    <wire from="(210,70)" to="(210,90)"/>
-    <wire from="(210,70)" to="(270,70)"/>
-    <wire from="(230,110)" to="(230,270)"/>
-    <wire from="(230,110)" to="(250,110)"/>
-    <wire from="(230,270)" to="(310,270)"/>
-    <wire from="(240,100)" to="(240,230)"/>
-    <wire from="(240,100)" to="(260,100)"/>
-    <wire from="(240,230)" to="(310,230)"/>
-    <wire from="(250,110)" to="(250,200)"/>
-    <wire from="(250,110)" to="(280,110)"/>
-    <wire from="(250,200)" to="(380,200)"/>
-    <wire from="(260,100)" to="(260,180)"/>
-    <wire from="(260,180)" to="(310,180)"/>
-    <wire from="(270,140)" to="(280,140)"/>
-    <wire from="(270,70)" to="(270,140)"/>
-    <wire from="(270,70)" to="(310,70)"/>
-    <wire from="(360,160)" to="(380,160)"/>
-    <wire from="(360,250)" to="(380,250)"/>
-    <wire from="(360,90)" to="(450,90)"/>
-    <wire from="(430,180)" to="(460,180)"/>
-    <wire from="(430,270)" to="(540,270)"/>
-    <wire from="(450,140)" to="(460,140)"/>
-    <wire from="(450,90)" to="(450,140)"/>
-    <wire from="(510,160)" to="(540,160)"/>
-    <wire from="(540,160)" to="(540,200)"/>
-    <wire from="(540,200)" to="(560,200)"/>
-    <wire from="(540,240)" to="(540,270)"/>
-    <wire from="(540,240)" to="(560,240)"/>
-    <wire from="(610,220)" to="(620,220)"/>
+    <wire from="(210,100)" to="(290,100)"/>
+    <wire from="(210,110)" to="(250,110)"/>
+    <wire from="(210,90)" to="(270,90)"/>
+    <wire from="(250,110)" to="(250,170)"/>
+    <wire from="(250,110)" to="(320,110)"/>
+    <wire from="(250,170)" to="(290,170)"/>
+    <wire from="(270,130)" to="(320,130)"/>
+    <wire from="(270,90)" to="(270,130)"/>
+    <wire from="(290,70)" to="(290,100)"/>
+    <wire from="(290,70)" to="(320,70)"/>
+    <wire from="(370,150)" to="(410,150)"/>
+    <wire from="(370,90)" to="(410,90)"/>
+    <wire from="(410,140)" to="(410,150)"/>
+    <wire from="(410,90)" to="(410,100)"/>
+    <wire from="(460,120)" to="(480,120)"/>
   </circuit>
   <circuit name="ALUSrc">
     <a name="appearance" val="logisim_evolution"/>
@@ -888,22 +860,29 @@ end TCL_Generic;&#13;
       <a name="fanout" val="4"/>
       <a name="incoming" val="4"/>
     </comp>
-    <comp lib="0" loc="(430,110)" name="Pin">
+    <comp lib="0" loc="(520,120)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
-      <a name="label" val="Mem_ToReg"/>
+      <a name="label" val="Mem_To_Reg"/>
       <a name="output" val="true"/>
     </comp>
-    <comp lib="1" loc="(330,90)" name="AND Gate"/>
-    <comp lib="1" loc="(410,110)" name="AND Gate"/>
+    <comp lib="1" loc="(320,100)" name="NOT Gate"/>
+    <comp lib="1" loc="(370,80)" name="AND Gate"/>
+    <comp lib="1" loc="(450,100)" name="AND Gate"/>
+    <comp lib="1" loc="(510,120)" name="AND Gate"/>
     <wire from="(140,130)" to="(190,130)"/>
-    <wire from="(210,110)" to="(280,110)"/>
-    <wire from="(210,120)" to="(210,130)"/>
-    <wire from="(210,130)" to="(360,130)"/>
-    <wire from="(210,70)" to="(210,90)"/>
-    <wire from="(210,70)" to="(280,70)"/>
-    <wire from="(330,90)" to="(360,90)"/>
-    <wire from="(410,110)" to="(430,110)"/>
+    <wire from="(210,100)" to="(290,100)"/>
+    <wire from="(210,110)" to="(390,110)"/>
+    <wire from="(210,120)" to="(380,120)"/>
+    <wire from="(210,60)" to="(210,90)"/>
+    <wire from="(210,60)" to="(320,60)"/>
+    <wire from="(370,80)" to="(400,80)"/>
+    <wire from="(380,120)" to="(380,140)"/>
+    <wire from="(380,140)" to="(460,140)"/>
+    <wire from="(390,110)" to="(390,120)"/>
+    <wire from="(390,120)" to="(400,120)"/>
+    <wire from="(450,100)" to="(460,100)"/>
+    <wire from="(510,120)" to="(520,120)"/>
   </circuit>
   <circuit name="RegWrite">
     <a name="appearance" val="logisim_evolution"/>
@@ -1526,5 +1505,46 @@ end TCL_Generic;&#13;
     <wire from="(790,150)" to="(790,460)"/>
     <wire from="(790,150)" to="(850,150)"/>
     <wire from="(870,160)" to="(910,160)"/>
+  </circuit>
+  <circuit name="Halt">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="Halt"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="clabel" val=""/>
+    <a name="clabelfont" val="SansSerif bold 16"/>
+    <a name="clabelup" val="east"/>
+    <a name="downloadFrequency" val="-1.0"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(140,130)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(190,130)" name="Splitter">
+      <a name="bit0" val="3"/>
+      <a name="bit1" val="2"/>
+      <a name="bit2" val="1"/>
+      <a name="bit3" val="0"/>
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
+    </comp>
+    <comp lib="0" loc="(360,110)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Halt_Out"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="1" loc="(310,110)" name="OR Gate">
+      <a name="inputs" val="4"/>
+    </comp>
+    <comp lib="1" loc="(340,110)" name="NOT Gate"/>
+    <wire from="(140,130)" to="(190,130)"/>
+    <wire from="(210,100)" to="(260,100)"/>
+    <wire from="(210,110)" to="(260,110)"/>
+    <wire from="(210,120)" to="(250,120)"/>
+    <wire from="(210,90)" to="(260,90)"/>
+    <wire from="(250,120)" to="(250,130)"/>
+    <wire from="(250,130)" to="(260,130)"/>
+    <wire from="(260,110)" to="(260,120)"/>
+    <wire from="(340,110)" to="(360,110)"/>
   </circuit>
 </project>
